@@ -1,8 +1,15 @@
 app-id: com.underfang.underfang-prologue
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 command: Underfang-prologue.x86_64
+
+finish-args:
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=pulseaudio
+  - --device=dri
+  - --share=ipc
 
 modules:
   - name: underfang-prologue
